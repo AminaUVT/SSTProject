@@ -1,0 +1,201 @@
+Flow in Youtube: Video Search and Viewing
+
+Test Cases in Gherkin Syntax:
+
+--1)Search Functionality
+
+Given the user is on the YouTube homepage
+When they enter a search query in the search bar
+And click on the search button
+Then they should see a list of relevant videos
+
+--2)Search with Empty String
+
+Given the user is on the YouTube homepage
+When they enter an empty search query
+And click on the search button
+Then they should see a prompt to enter search keywords
+
+--3)Search Autocomplete Suggestions
+
+Given the user is typing in the search bar on YouTube
+When they have entered part of a search query
+Then they should see autocomplete suggestions
+
+--4)Selecting Video from Search Results
+
+Given the user has performed a search on YouTube
+When they select a video from the search results
+Then the video should start playing
+
+--5)Video Quality Change
+
+Given a video is currently playing
+When the user changes the video quality
+Then the video should play in the selected quality
+
+--6)Pause and Play Video
+
+Given a video is currently playing
+When the user clicks the pause button
+Then the video should pause
+And when the user clicks play
+Then the video should resume
+
+--7)Like a Video
+
+Given a video is currently playing
+And the user is logged in
+When the user clicks the like button
+Then the like count of the video should increase
+
+--8)Like a Video Without Login
+
+Given a video is currently playing
+And the user is not logged in
+When the user clicks the like button
+Then they should be prompted to log in
+
+--9)Dislike a Video
+
+Given a video is currently playing
+And the user is logged in
+When the user clicks the dislike button
+Then the dislike count of the video should increase
+
+--10)Subscribe to a Channel
+
+Given a video from a specific channel is currently playing
+And the user is logged in
+When the user clicks the subscribe button
+Then they should be subscribed to the channel
+
+--11)Comment on a Video
+
+Given a video is currently playing
+And the user is logged in
+When the user submits a comment
+Then the comment should be posted under the video
+
+--12)Share a Video
+
+Given a video is currently playing
+When the user clicks the share button
+Then they should see sharing options
+
+--13)Add Video to Watch Later
+
+Given a video is currently playing
+And the user is logged in
+When the user clicks the 'Add to Watch Later' button
+Then the video should be added to their 'Watch Later' list
+
+--14)Report a Video
+
+Given a video is currently playing
+When the user clicks the report button
+Then they should see options to report the video
+
+--15)Adjust Video Playback Speed
+
+Given a video is currently playing
+When the user changes the playback speed
+Then the video should play at the selected speed
+ 
+--16)Full-Screen Video Playback
+
+Given a video is currently playing
+When the user clicks the full-screen button
+Then the video should switch to full-screen mode
+
+--17)Checking Video Captions
+
+Given a video is currently playing
+When the user turns on captions
+Then captions should be displayed on the video
+
+--18)Changing Video Playback Quality to Non-Existing Option
+
+Given a video is currently playing
+When the user tries to select a playback quality that is not available
+Then the quality should not change and an error message should be displayed
+
+--19)Navigating Through Video Using Progress Bar
+
+Given a video is currently playing
+When the user clicks on a different point on the progress bar
+Then the video should jump to that point in the timeline
+
+--20)Mute and Unmute Video
+
+Given a video is currently playing
+When the user clicks the mute button
+Then the video should be muted
+And when the user clicks unmute
+Then the video sound should be restored
+
+--21)Adding a Video to a Playlist
+
+Given a video is currently playing
+And the user is logged in
+When the user adds the video to a playlist
+Then the video should be added to the selected playlist
+
+--22)Checking Video Description
+
+Given a video is currently playing
+When the user views the video description
+Then they should see the full description provided by the uploader
+
+--23)Viewing Related Videos
+
+Given a video is currently playing
+When the user scrolls to the related videos section
+Then they should see a list of videos related to the current video
+
+--24)Invalid Video Search Query
+
+Given the user is on the YouTube homepage
+When they enter an invalid or nonsensical search query
+Then they should see a message indicating no results were found
+
+--25)Playing a Video from the Channel Page
+
+Given the user is on a YouTube channel page
+When they select a video from the channel's video list
+Then the video should start playing
+
+--26)Viewing Channel Information
+
+Given a video from a specific channel is currently playing
+When the user clicks on the channel name
+Then they should be taken to the channel's page with details like channel description and videos
+
+--27)Subscribing to a Channel and Receiving Notifications
+
+Given the user is viewing a channel they are not subscribed to
+And the user is logged in
+When the user subscribes and opts to receive notifications
+Then they should receive notifications for new videos from that channel
+
+--28)Saving a Video Offline (If Applicable)
+
+Given a video is currently playing
+And the user is logged in
+When the user chooses to save the video for offline viewing
+Then the video should be saved in their 'Offline Videos' section
+
+--29)Searching for a Channel
+
+Given the user is on the YouTube homepage
+When they enter a channel name in the search bar
+And click on the search button
+Then they should see the channel in the search results
+
+--30)Looping a Video
+
+Given a video is currently playing
+When the user enables the loop feature
+Then the video should continuously loop until the loop feature is disabled
+
+ 
